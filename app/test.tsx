@@ -2,7 +2,15 @@ import React from 'react'
 
 const test = () => {
   return (
-    <div>test</div>
+    <>
+    <div>
+        <h1>Test</h1>
+        <h1>Test</h1>
+        <h1>Test</h1>
+        <h1>Test</h1>
+        <h1>Test</h1>
+    </div>
+    </>
   )
 }
 
