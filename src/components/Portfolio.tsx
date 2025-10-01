@@ -45,8 +45,8 @@ const Portfolio = () => {
               {/* Hover 狀態顯示詳細描述 */}
               <div className="hidden group-hover:block transition-all duration-300">
                 <p className="text-white/90 mb-4 leading-[1.8]">
-                  一個專為母嬰族群打造的電商平台，提供優質的母嬰用品購物體驗。採用 Next.js SSR 提升 SEO 效果，整合 React
-                  Query 進行高效資料管理，並使用 Bootstrap 與 CSS Modules 打造響應式介面。
+                  販售檸檬甜點為主的網路平台，有訂位系統、第三方支付。採用 Next.js SSR 提升 SEO 效果，整合 React Query
+                  進行高效資料管理，並使用 Bootstrap 與 CSS Modules 打造響應式介面。
                 </p>
               </div>
             </div>
@@ -78,8 +78,7 @@ const Portfolio = () => {
               {/* Hover 狀態顯示詳細描述 */}
               <div className="hidden group-hover:block transition-all duration-300">
                 <p className="text-white/90 mb-4 leading-[1.8]">
-                  羽球活動資訊網站，展示了完整的響應式設計能力。運用原生 HTML、CSS 與 JavaScript
-                  打造流暢的使用者介面，並實現跨裝置的最佳瀏覽體驗。
+                  羽球排隊下場系統。使用 Next.js 做全端開發，並將人員、場地等等資料以 MySQL 做資料庫管理。
                 </p>
               </div>
             </div>
@@ -110,7 +109,7 @@ const Portfolio = () => {
               {/* Hover 狀態顯示詳細描述 */}
               <div className="hidden group-hover:block transition-all duration-300">
                 <p className="text-white/90 mb-4 leading-[1.8]">
-                專案發想以遊戲與點陣圖風格去做設計，並且以諧音輸贏為網站名稱，希望讓使用者在瀏覽網站時，是以輕鬆且帶有點好奇的心情去操作，就如同在玩遊戲一樣。
+                  專案發想以遊戲與點陣圖風格去做設計，並且以諧音輸贏為網站名稱，希望讓使用者在瀏覽網站時，是以輕鬆且帶有點好奇的心情去操作，就如同在玩遊戲一樣。
                 </p>
               </div>
             </div>
