@@ -13,7 +13,7 @@ function Education() {
           <div className="relative pl-20 mb-12">
             <div className="absolute left-5 top-[10px] w-5 h-5 rounded-full bg-gradient-to-r from-[#667eea] to-[#764ba2] border-4 border-[#1a1a2e] shadow-[0_0_20px_rgba(102,126,234,0.6)]"></div>
             <div className="bg-white/5 p-8 rounded-[15px] border border-white/10 transition-all duration-300 hover:bg-white/[0.08] hover:border-[#667eea] hover:translate-x-[10px] hover:shadow-[0_10px_30px_rgba(102,126,234,0.2)]">
-              <div className="flex items-start gap-6">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
                 <div className="flex-shrink-0">
                   <img
                     src="/dazhen.png"
@@ -21,11 +21,11 @@ function Education() {
                     className="w-20 h-20 object-contain rounded-lg bg-white/10 p-2"
                   />
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 text-center md:text-left">
                   <h3 className="text-[1.8rem] text-white mb-2">大真有限公司</h3>
                   <p className="text-xl text-[#667eea] mb-2">前端工程師</p>
                   <p className="text-[0.95rem] text-white/50 mb-4">2025 - 至今</p>
-                  <ul className="text-base text-white/70 leading-[1.6] list-disc pl-5">
+                  <ul className="text-base text-white/70 leading-[1.6] list-disc pl-5 text-left">
                     <li>重構舊專案解決長期冗餘 Bug，加入註解提升閱讀性與開發效率。</li>
                     <li>使用 TypeScript 提升專案型別安全性與可維護性，降低執行階段錯誤風險。</li>
                     <li>搭配 Tailwind CSS 開發，提升開發速度與樣式一致性。</li>
@@ -41,7 +41,7 @@ function Education() {
           <div className="relative pl-20 mb-12">
             <div className="absolute left-5 top-[10px] w-5 h-5 rounded-full bg-gradient-to-r from-[#667eea] to-[#764ba2] border-4 border-[#1a1a2e] shadow-[0_0_20px_rgba(102,126,234,0.6)]"></div>
             <div className="bg-white/5 p-8 rounded-[15px] border border-white/10 transition-all duration-300 hover:bg-white/[0.08] hover:border-[#667eea] hover:translate-x-[10px] hover:shadow-[0_10px_30px_rgba(102,126,234,0.2)]">
-              <div className="flex items-start gap-6">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
                 <div className="flex-shrink-0 bg-white rounded-lg">
                   <img
                     src="/lelemom-logo.png"
@@ -49,11 +49,11 @@ function Education() {
                     className="w-20 h-20 object-contain rounded-lg bg-white/10 p-2"
                   />
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 text-center md:text-left">
                   <h3 className="text-[1.8rem] text-white mb-2">均福七七有限公司</h3>
                   <p className="text-xl text-[#667eea] mb-2">前端工程師</p>
                   <p className="text-[0.95rem] text-white/50 mb-4">2023 - 2025</p>
-                  <ul className="text-base text-white/70 leading-[1.6] list-disc pl-5">
+                  <ul className="text-base text-white/70 leading-[1.6] list-disc pl-5 text-left">
                     <li>
                       選擇 Next.js 伺服器端渲染（Server-Side Rendering）動態生成頁面內容，改善搜尋引擎索引效率與網站 SEO
                       評分，並優化首次載入體驗。
@@ -75,7 +75,7 @@ function Education() {
           <div className="relative pl-20 mb-12">
             <div className="absolute left-5 top-[10px] w-5 h-5 rounded-full bg-gradient-to-r from-[#667eea] to-[#764ba2] border-4 border-[#1a1a2e] shadow-[0_0_20px_rgba(102,126,234,0.6)]"></div>
             <div className="bg-white/5 p-8 rounded-[15px] border border-white/10 transition-all duration-300 hover:bg-white/[0.08] hover:border-[#667eea] hover:translate-x-[10px] hover:shadow-[0_10px_30px_rgba(102,126,234,0.2)]">
-              <div className="flex items-start gap-6">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
                 <div className="flex-shrink-0">
                   <img
                     src="/nkust.png"
@@ -83,7 +83,7 @@ function Education() {
                     className="w-20 h-20 object-contain rounded-lg bg-white/10 p-2"
                   />
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 text-center md:text-left">
                   <h3 className="text-[1.8rem] text-white mb-2">國立高雄科技大學</h3>
                   <p className="text-xl text-[#667eea] mb-2">電子工程學系-資訊工程組</p>
                   <p className="text-[0.95rem] text-white/50 mb-4">2020 - 2023</p>
@@ -102,7 +102,7 @@ function Education() {
           <div className="relative pl-20 mb-12">
             <div className="absolute left-5 top-[10px] w-5 h-5 rounded-full bg-gradient-to-r from-[#667eea] to-[#764ba2] border-4 border-[#1a1a2e] shadow-[0_0_20px_rgba(102,126,234,0.6)]"></div>
             <div className="bg-white/5 p-8 rounded-[15px] border border-white/10 transition-all duration-300 hover:bg-white/[0.08] hover:border-[#667eea] hover:translate-x-[10px] hover:shadow-[0_10px_30px_rgba(102,126,234,0.2)]">
-              <div className="flex items-start gap-6">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
                 <div className="flex-shrink-0">
                   <img
                     src="/isu.jpeg"
@@ -110,7 +110,7 @@ function Education() {
                     className="w-20 h-20 object-contain rounded-lg bg-white/10 p-2"
                   />
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 text-center md:text-left">
                   <h3 className="text-[1.8rem] text-white mb-2">私立義守大學</h3>
                   <p className="text-xl text-[#667eea] mb-2">資訊工程學系</p>
                   <p className="text-[0.95rem] text-white/50 mb-4">2015 - 2019</p>
