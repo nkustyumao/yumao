@@ -6,6 +6,7 @@ import About from "./components/About";
 import Education from "./components/Education";
 import Portfolio from "./components/Portfolio";
 import Footer from "./components/Footer";
+import BadmintonBackground from "./components/BadmintonBackground";
 
 function App() {
   const [activeSection, setActiveSection] = useState("home");
@@ -18,6 +19,9 @@ function App() {
 
   return (
     <div className="app">
+      {/* 羽毛球背景動畫 */}
+      <BadmintonBackground />
+
       <Header activeSection={activeSection} scrollToSection={scrollToSection} />
 
       <main className="main-content">
