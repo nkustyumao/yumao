@@ -56,3 +56,43 @@ h1, h2, h3, h4, h5, h6 {
 ::-webkit-scrollbar-thumb:hover {
   background: #764ba2;
 }
+
+/* 筆記內容優化 */
+pre {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+}
+
+pre code {
+  display: block;
+  white-space: pre;
+  word-wrap: normal;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  pre code {
+    font-size: 0.75rem;
+  }
+}
+
+/* 確保內容不會超出螢幕 */
+article img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 優化表格在手機上的顯示 */
+table {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 優化長單詞換行 */
+article p, article li {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}

@@ -15,9 +15,11 @@ interface SidebarProps {
   categories: Category[];
   selectedPage: string;
   onSelectPage: (pageId: string) => void;
+  isOpen: boolean;
+  onClose: () => void;
 }
 
-const Sidebar = ({ categories, selectedPage, onSelectPage }: SidebarProps) => {
+const Sidebar = ({ categories, selectedPage, onSelectPage, isOpen, onClose }: SidebarProps) => {
   const [expandedCategories, setExpandedCategories] = useState<string[]>(["react"]);
 
   const toggleCategory = (categoryId: string) => {
@@ -26,14 +28,30 @@ const Sidebar = ({ categories, selectedPage, onSelectPage }: SidebarProps) => {
     );
   };
 
+  const handlePageSelect = (pageId: string) => {
+    onSelectPage(pageId);
+    onClose(); // 手機版選擇後關閉側邊欄
+  };
+
   return (
-    <aside className="fixed left-0 top-24 bottom-0 w-64 bg-[rgba(26,26,46,0.95)] backdrop-blur-[10px] border-r border-white/10 overflow-y-auto z-50">
+    <>
+      {/* 手機版遮罩 */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black/50 z-40 md:hidden"
+          onClick={onClose}
+        />
+      )}
+      
+      {/* 側邊欄 */}
+      <aside className={`fixed left-0 top-24 bottom-0 w-64 bg-[rgba(26,26,46,0.95)] backdrop-blur-[10px] border-r border-white/10 overflow-y-auto z-50 transition-transform duration-300 
+        ${isOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0`}>
       <div className="p-4">
         {/* <h2 className="text-xl font-bold text-white mb-4 px-2">學習筆記</h2> */}
 
         {/* 首頁按鈕 */}
         <button
-          onClick={() => onSelectPage("home")}
+          onClick={() => handlePageSelect("home")}
           className={`w-full flex items-center gap-3 px-3 py-2.5 mb-4 text-left rounded-lg transition-all duration-300 ${
             selectedPage === "home"
               ? "bg-gradient-to-br from-[#667eea] to-[#764ba2] text-white shadow-[0_4px_15px_rgba(102,126,234,0.4)]"
@@ -84,7 +102,7 @@ const Sidebar = ({ categories, selectedPage, onSelectPage }: SidebarProps) => {
                   {category.subPages.map((subPage) => (
                     <button
                       key={subPage.id}
-                      onClick={() => onSelectPage(subPage.id)}
+                      onClick={() => handlePageSelect(subPage.id)}
                       className={`w-full text-left px-4 py-2 rounded-lg transition-all duration-300 text-sm ${
                         selectedPage === subPage.id
                           ? "bg-gradient-to-br from-[#667eea] to-[#764ba2] text-white shadow-[0_4px_15px_rgba(102,126,234,0.4)]"
@@ -101,6 +119,7 @@ const Sidebar = ({ categories, selectedPage, onSelectPage }: SidebarProps) => {
         })}
       </div>
     </aside>
+    </>
   );
 };
 
