@@ -16,7 +16,7 @@ const Home = ({ scrollToSection }: HomeProps) => {
         <div className="flex gap-6 justify-center flex-wrap">
           <button 
             className="py-4 px-8 bg-gradient-to-br from-[#667eea] to-[#764ba2] text-white border-0 rounded-[10px] text-[1.1rem] font-semibold cursor-pointer transition-all duration-300 shadow-[0_4px_15px_rgba(102,126,234,0.4)] hover:-translate-y-[2px] hover:shadow-[0_6px_20px_rgba(102,126,234,0.6)]"
-            onClick={() => scrollToSection("portfolio")}
+            onClick={() => scrollToSection("project")}
           >
             查看作品
           </button>

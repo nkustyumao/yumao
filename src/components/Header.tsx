@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 interface HeaderProps {
   activeSection: string;
@@ -7,53 +8,90 @@ interface HeaderProps {
 
 const Header = ({ activeSection, scrollToSection }: HeaderProps) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // 處理導航和滾動
+  const handleNavigation = (sectionId: string) => {
+    if (location.pathname !== "/") {
+      // 如果不在首頁，先導航回首頁，然後延遲滾動
+      navigate("/");
+      // 延遲等待頁面渲染完成再滾動
+      setTimeout(() => {
+        scrollToSection(sectionId);
+      }, 100);
+    } else {
+      // 如果已在首頁，直接滾動
+      scrollToSection(sectionId);
+    }
+  };
+
+  // 處理筆記按鈕點擊
+  const handleNoteClick = () => {
+    navigate("/note");
+    // 滾動到頂部
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 bg-[rgba(26,26,46,0.95)] backdrop-blur-[10px] border-b border-white/10 z-[1000]">
       <div className="max-w-[1200px] mx-auto py-6 px-8 flex justify-between items-center">
-        <h1 className="text-[1.8rem] font-bold bg-gradient-to-br from-[#667eea] to-[#764ba2] bg-clip-text text-transparent m-0">
+        <h1 
+          className="text-[1.8rem] font-bold bg-gradient-to-br from-[#667eea] to-[#764ba2] bg-clip-text text-transparent m-0 cursor-pointer"
+          onClick={() => handleNavigation("home")}
+        >
           YUMAO
         </h1>
         <nav className="flex gap-1 md:gap-8 text-nowrap">
-          <button
+          {/* <button
             className={`py-2 px-2 md:px-4 border-0 text-base font-medium cursor-pointer transition-all duration-300 rounded-lg ${
               activeSection === "home"
                 ? "bg-gradient-to-br from-[#667eea] to-[#764ba2] text-white shadow-[0_4px_15px_rgba(102,126,234,0.4)]"
                 : "bg-transparent text-white/70 hover:text-white hover:bg-white/5"
             }`}
-            onClick={() => scrollToSection("home")}
+            onClick={() => handleNavigation("home")}
           >
             首頁
-          </button>
+          </button> */}
           <button
             className={`py-2 px-2 md:px-4 border-0 text-base font-medium cursor-pointer transition-all duration-300 rounded-lg ${
-              activeSection === "about"
+              location.pathname === "/" && activeSection === "about"
                 ? "bg-gradient-to-br from-[#667eea] to-[#764ba2] text-white shadow-[0_4px_15px_rgba(102,126,234,0.4)]"
                 : "bg-transparent text-white/70 hover:text-white hover:bg-white/5"
             }`}
-            onClick={() => scrollToSection("about")}
+            onClick={() => handleNavigation("about")}
           >
             關於
           </button>
           <button
             className={`py-2 px-2 md:px-4 border-0 text-base font-medium cursor-pointer transition-all duration-300 rounded-lg ${
-              activeSection === "education"
+              location.pathname === "/" && activeSection === "education"
                 ? "bg-gradient-to-br from-[#667eea] to-[#764ba2] text-white shadow-[0_4px_15px_rgba(102,126,234,0.4)]"
                 : "bg-transparent text-white/70 hover:text-white hover:bg-white/5"
             }`}
-            onClick={() => scrollToSection("education")}
+            onClick={() => handleNavigation("education")}
           >
             經歷
           </button>
           <button
             className={`py-2 px-2 md:px-4 border-0 text-base font-medium cursor-pointer transition-all duration-300 rounded-lg ${
-              activeSection === "portfolio"
+              location.pathname === "/" && activeSection === "project"
                 ? "bg-gradient-to-br from-[#667eea] to-[#764ba2] text-white shadow-[0_4px_15px_rgba(102,126,234,0.4)]"
                 : "bg-transparent text-white/70 hover:text-white hover:bg-white/5"
             }`}
-            onClick={() => scrollToSection("portfolio")}
+            onClick={() => handleNavigation("project")}
           >
             作品
+          </button>
+          <button
+            className={`py-2 px-2 md:px-4 border-0 text-base font-medium cursor-pointer transition-all duration-300 rounded-lg ${
+              location.pathname === "/note"
+                ? "bg-gradient-to-br from-[#667eea] to-[#764ba2] text-white shadow-[0_4px_15px_rgba(102,126,234,0.4)]"
+                : "bg-transparent text-white/70 hover:text-white hover:bg-white/5"
+            }`}
+            onClick={handleNoteClick}
+          >
+            筆記
           </button>
 
           {/* 下拉選單 */}

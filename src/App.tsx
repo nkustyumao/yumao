@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 import Home from "./components/Home";
@@ -7,6 +8,7 @@ import Education from "./components/Education";
 import Project from "./components/Project";
 import Footer from "./components/Footer";
 import BadmintonBackground from "./components/BadmintonBackground";
+import Note from "./components/Note";
 
 function App() {
   const [activeSection, setActiveSection] = useState("home");
@@ -19,18 +21,24 @@ function App() {
 
   return (
     <div className="app">
-      {/* 羽毛球背景動畫 */}
-      <BadmintonBackground />
-
       <Header activeSection={activeSection} scrollToSection={scrollToSection} />
-
-      <main className="main-content">
-        <Home scrollToSection={scrollToSection} />
-        <About />
-        <Education />
-        <Project />
-      </main>
-
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <BadmintonBackground />
+              <main className="main-content">
+                <Home scrollToSection={scrollToSection} />
+                <About />
+                <Education />
+                <Project />
+              </main>
+            </>
+          }
+        />
+        <Route path="/note" element={<Note />} />
+      </Routes>
       <Footer />
     </div>
   );

@@ -6,7 +6,7 @@ function Education() {
           經歷
         </h2>
         <div className="relative max-w-[800px] mx-auto">
-          {/* Timeline vertical line */}
+          {/* 時間線 */}
           <div className="absolute left-[30px] top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#667eea] to-[#764ba2]"></div>
 
           {/* 大真有限公司 */}

@@ -10,7 +10,7 @@ const Project = () => {
   };
 
   return (
-    <section id="portfolio" className="min-h-screen py-20 px-8 flex items-center justify-center">
+    <section id="project" className="min-h-screen py-20 px-8 flex items-center justify-center">
       <div className="w-full max-w-[1200px] mx-auto">
         <h2 className="text-5xl font-bold text-center mb-16 bg-gradient-to-br from-[#667eea] to-[#764ba2] bg-clip-text text-transparent">
           作品集
