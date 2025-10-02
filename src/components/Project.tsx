@@ -1,4 +1,4 @@
-const Portfolio = () => {
+const Project = () => {
   const Skill = ({ skill }: { skill: string }) => {
     return (
       <div className="flex gap-3 flex-wrap">
@@ -109,4 +109,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Project;

@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import About from "./components/About";
 import Education from "./components/Education";
-import Portfolio from "./components/Portfolio";
+import Project from "./components/Project";
 import Footer from "./components/Footer";
 import BadmintonBackground from "./components/BadmintonBackground";
 
@@ -28,7 +28,7 @@ function App() {
         <Home scrollToSection={scrollToSection} />
         <About />
         <Education />
-        <Portfolio />
+        <Project />
       </main>
 
       <Footer />
