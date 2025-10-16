@@ -55,7 +55,9 @@ const Project = () => {
               <img src="/badminton.png" alt="Badminton" className="w-full h-full object-cover object-center block" />
               <div className="absolute inset-0 bg-[rgba(102,126,234,0.9)] flex flex-col items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                 <h3 className="text-white text-[1.8rem] mb-2">羽球下場排隊系統</h3>
-                {/* <p className="text-white/90 text-base">點擊查看詳情</p> */}
+                <a href="https://badminton.yumaoapp.com/" target="_blank" rel="noopener noreferrer">
+                  <span className="text-white">點擊查看詳情</span>
+                </a>
               </div>
             </div>
             <div className="p-8 relative min-h-[200px]">
@@ -71,7 +73,8 @@ const Project = () => {
               </div>
               <div className="hidden group-hover:block transition-all duration-300">
                 <p className="text-white/90 mb-4 leading-[1.8]">
-                  羽球排隊下場系統。使用 Next.js 做全端開發，並將人員、場地等等資料以 MySQL 做資料庫管理。
+                  羽球場地排隊管理系統，解決傳統排隊管理效率低、容易出錯的問題。系統採用 Next.js 15
+                  全端開發，整合即時通訊技術，提供流暢的使用者體驗和可視化的管理流程。
                 </p>
               </div>
             </div>

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  font-family: 'Inter', 'Segoe UI', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Inter", "Segoe UI", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.6;
   font-weight: 400;
 
@@ -20,6 +20,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background: #1a1a2e;
+  user-select: none;
 }
 
 #root {
@@ -36,7 +37,12 @@ a:hover {
   color: #764ba2;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1.2;
 }
 
@@ -92,7 +98,8 @@ table {
 }
 
 /* 優化長單詞換行 */
-article p, article li {
+article p,
+article li {
   word-wrap: break-word;
   overflow-wrap: break-word;
 }

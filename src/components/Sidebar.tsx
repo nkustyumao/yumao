@@ -20,7 +20,7 @@ interface SidebarProps {
 }
 
 const Sidebar = ({ categories, selectedPage, onSelectPage, isOpen, onClose }: SidebarProps) => {
-  const [expandedCategories, setExpandedCategories] = useState<string[]>(["react"]);
+  const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
 
   const toggleCategory = (categoryId: string) => {
     setExpandedCategories((prev) =>
